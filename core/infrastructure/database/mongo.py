@@ -64,3 +64,6 @@ class MongoDB(AbstractDatabase):
 
         item = self.__collection.find_one({'_id': result.inserted_id})
         return self.__parse_result(item)
+
+    def is_health(self) -> bool:
+        return self.__client.admin.command('ping').get('ok', 0) == 1

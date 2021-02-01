@@ -44,7 +44,7 @@ class Api(falcon.API):
     def __resources(self):
         return {
             'product': ProductResource(self.__services['product'], self.__logger),
-            'health_check': HealthCheckResource()
+            'health_check': HealthCheckResource(self.__database)
         }
 
     def __add_routes(self):

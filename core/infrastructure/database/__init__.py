@@ -18,3 +18,7 @@ class AbstractDatabase(ABC):
     @abstractmethod
     def create(self, data: dict) -> dict:
         pass
+
+    @abstractmethod
+    def is_health(self) -> bool:
+        pass
