@@ -1,0 +1,16 @@
+version: '2'
+services:
+  api:
+    build: .
+    environment:
+      PYTHONPATH: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongo
+    network_mode: host
+  mongo:
+    image: mongo
+    network_mode: host
+    ports:
+      - '27017:27017'
