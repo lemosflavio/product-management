@@ -1,0 +1,204 @@
+{
+  "info": {
+    "_postman_id": "e0211f2e-0213-42ed-8e2f-ba1404326e35",
+    "name": "Product Management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/products/6017536a74b22b347753f4d7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "products",
+            "6017536a74b22b347753f4d7"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET HEALTH_CHECK",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/health_check",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "health_check"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET LIST",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/products/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "products",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET ACTIVE LIST",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/products/?status=ACTIVE",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "products",
+            ""
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "ACTIVE"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET DELETED LIST",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/products/?status=DELETED",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "products",
+            ""
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "DELETED"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET EAN LIST",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/products/?status=ACTIVE",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "products",
+            ""
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "ACTIVE"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"ean\": \"7899963902406\",\n    \"name\": \"Smart TV Philco 50\\\" PTV50G70SBLSG Ultra HD 4K Tela Infinita Quadcore e App Store\",\n    \"description\": \"Televisor com tela de 50 polegadas em resolução 4K (Ultra HD). Tecnologia Smart permitindo acesso ao Netflix, Youtube, Globo Play, entre outros. Processador Quad Core, proporcionando maior velocidade para conteúdo dos aplicativos e performance ideal para seu Televisor, além de processador gráfico Triple Core gerando maior velocidade no processamento de gráficos mais complexos. Possui também tecnologia de áudio Dolby.\",\n    \"images\": [\n        \"https://images-americanas.b2w.io/produtos/01/00/img/1524142/3/1524142350_1GG.jpg\",\n        \"https://images-americanas.b2w.io/produtos/01/00/img/1524142/3/1524142350_3GG.jpg\",\n        \"https://images-americanas.b2w.io/produtos/01/00/img/1524142/3/1524142350_4GG.jpg\"\n    ],\n    \"price\": 19999900,\n    \"quantity\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/products/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "products",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"ean\": \"7899963902406\",\n    \"name\": \"Smart TV Philco 50\\\" PTV50G70SBLSG Ultra HD 4K Tela Infinita Quadcore e App Store\",\n    \"description\": \"Televisor com tela de 50 polegadas em resolução 4K (Ultra HD). Tecnologia Smart permitindo acesso ao Netflix, Youtube, Globo Play, entre outros. Processador Quad Core, proporcionando maior velocidade para conteúdo dos aplicativos e performance ideal para seu Televisor, além de processador gráfico Triple Core gerando maior velocidade no processamento de gráficos mais complexos. Possui também tecnologia de áudio Dolby.\",\n    \"images\": [\n        \"https://images-americanas.b2w.io/produtos/01/00/img/1524142/3/1524142350_1GG.jpg\",\n        \"https://images-americanas.b2w.io/produtos/01/00/img/1524142/3/1524142350_3GG.jpg\",\n        \"https://images-americanas.b2w.io/produtos/01/00/img/1524142/3/1524142350_4GG.jpg\"\n    ],\n    \"price\": 19999900,\n    \"quantity\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/products/6017536a74b22b347753f4d7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "products",
+            "6017536a74b22b347753f4d7"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
