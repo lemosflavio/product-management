@@ -1,0 +1,5 @@
+-r requirements.txt
+
+freezegun==1.1.0
+pytest==6.2.2
+faker==5.8.0
