@@ -1,0 +1,20 @@
+name: release-drafter
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update_release_draft:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Get tag
+        id: get_tag
+        run: echo "::set-output name=tag_name::v$(date +'%Y%m%d')-x"
+      - uses: release-drafter/release-drafter@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG_NAME: ${{ steps.get_tag.outputs.tag_name }}
+        with:
+          tag: ${{ env.TAG_NAME }}
+          name: ${{ env.TAG_NAME }}
